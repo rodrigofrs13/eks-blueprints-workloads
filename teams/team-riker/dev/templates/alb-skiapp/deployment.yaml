@@ -20,7 +20,7 @@ spec:
             - name: CLUSTER_NAME
               value: {{.Values.spec.clusterName}}
           ports:
-            - containerPort: 8080
+            - containerPort: 80
           resources:
             requests:
               memory: '64Mi'
