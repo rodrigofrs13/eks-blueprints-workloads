@@ -6,7 +6,7 @@ metadata:
   labels:
     app: skiapp
 spec:
-  replicas: 3
+  replicas: 0
   revisionHistoryLimit: 1
   selector:
     matchLabels:
@@ -32,9 +32,9 @@ spec:
                 memory: "128Mi"
                 cpu: "500m"
       {{ if .Values.spec.karpenterInstanceProfile }}
-      nodeSelector: # <- add nodeselector, toleration and spread constraitns
-        team: default
-        type: karpenter
+      # nodeSelector: # <- add nodeselector, toleration and spread constraitns
+      #   team: default
+      #   type: karpenter
       tolerations:
         - key: 'karpenter'
           operator: 'Exists'
