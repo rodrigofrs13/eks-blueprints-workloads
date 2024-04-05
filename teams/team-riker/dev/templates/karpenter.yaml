@@ -39,7 +39,7 @@ spec:
     - key: "karpenter.k8s.aws/instance-family"
       operator: In
       values: ["m5","m5d","c5","c5d","c4", "t3a"]
-      minValues: 5      
+      minValues: 2      
     - key: karpenter.k8s.aws/instance-cpu
       operator: Lt
       values:
