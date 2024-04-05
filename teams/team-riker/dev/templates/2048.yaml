@@ -42,9 +42,9 @@ spec:
       shareProcessNamespace: false
       terminationGracePeriodSeconds: 30
       {{ if .Values.spec.karpenterInstanceProfile }}
-      # nodeSelector:
-      #   team: default
-      #   type: karpenter
+      nodeSelector:
+        team: default
+        type: karpenter
       tolerations:
         - key: 'karpenter'
           operator: 'Exists'
