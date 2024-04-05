@@ -34,11 +34,11 @@ spec:
   requirements:
     - key: "karpenter.k8s.aws/instance-category"
       operator: In
-      values: ["c", "m", "t"]
+      values: ["c", "m"]
       minValues: 1
     - key: "karpenter.k8s.aws/instance-family"
       operator: In
-      values: ["m5","m5d","c5","c5d","c4", "t3a"]
+      values: ["m5","m5d","c5","c5d","c4"]
       minValues: 1      
     - key: karpenter.k8s.aws/instance-cpu
       operator: Lt
